@@ -196,10 +196,10 @@ class QueryResponse(Response):
         self.target_temperature_min = 17
         self.target_temperature_max = 30
         self.supports_humidity = None
-        self.supported_modes = None
+        self.supported_op_modes = None
         self.supports_fan_speed = False
-        self.supports_swing_angle_vert = False
-        self.supports_swing_angle_horz = False
+        self.supports_vert_swing_angle = False
+        self.supports_horz_swing_angle = False
         self.supports_wind_sense = False
         self.supports_co2_level = False
         self.supports_eco = False
@@ -305,12 +305,12 @@ class QueryResponse(Response):
 
         self.supports_humidity = bool(payload[23])  # TODO unverified
 
-        self.supported_modes = list(payload[26:31])
+        self.supported_op_modes = list(payload[26:31])
 
         self.supports_fan_speed = bool(payload[32])
 
-        self.supports_swing_angle_vert = bool(payload[40])
-        self.supports_swing_angle_horz = bool(payload[42])
+        self.supports_vert_swing_angle = bool(payload[40])
+        self.supports_horz_swing_angle = bool(payload[42])
 
         self.supports_wind_sense = bool(payload[44])
 

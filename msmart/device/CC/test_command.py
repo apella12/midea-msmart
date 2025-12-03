@@ -90,10 +90,10 @@ class TestQueryResponse(_TestResponseBase):
         "target_temperature_min",
         "target_temperature_max",
         "supports_humidity",
-        "supported_modes",
+        "supported_op_modes",
         "supports_fan_speed",
-        "supports_swing_angle_vert",
-        "supports_swing_angle_horz",
+        "supports_vert_swing_angle",
+        "supports_horz_swing_angle",
         "supports_wind_sense",
         "supports_co2_level",
         "supports_eco",
@@ -314,17 +314,17 @@ class TestQueryResponse(_TestResponseBase):
         self.assertEqual(resp.supports_humidity, True)
 
         # Check for supported modes
-        self.assertIsNotNone(resp.supported_modes)
-        assert resp.supported_modes
-        self.assertIn(1, resp.supported_modes)
-        self.assertIn(2, resp.supported_modes)
-        self.assertIn(3, resp.supported_modes)
-        self.assertIn(6, resp.supported_modes)
+        self.assertIsNotNone(resp.supported_op_modes)
+        assert resp.supported_op_modes
+        self.assertIn(1, resp.supported_op_modes)
+        self.assertIn(2, resp.supported_op_modes)
+        self.assertIn(3, resp.supported_op_modes)
+        self.assertIn(6, resp.supported_op_modes)
 
         self.assertEqual(resp.supports_fan_speed, True)
 
-        self.assertEqual(resp.supports_swing_angle_vert, True)
-        self.assertEqual(resp.supports_swing_angle_horz, True)
+        self.assertEqual(resp.supports_vert_swing_angle, True)
+        self.assertEqual(resp.supports_horz_swing_angle, True)
 
         self.assertEqual(resp.supports_wind_sense, True)
 
