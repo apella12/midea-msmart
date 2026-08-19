@@ -139,7 +139,7 @@ $ msmart-ng control <HOST> operational_mode=cool target_temperature=20.5 fan_spe
 **Note:** For CC devices, either the `--auto` argument or the `--device_type` argument must be specified.
 
 ### Home Assistant
-To control your Midea AC units via Home Assistant, use this [midea-ac-py](https://github.com/mill1000/midea-ac-py) fork.
+To control your Midea AC units via Home Assistant, use the [mill1000/midea-ac-py](https://github.com/mill1000/midea-ac-py) integration.
 
 ### Python
 To control devices programmatically, see the included Python [example](example.py).
@@ -155,6 +155,11 @@ usage: msmart-ng [-h] [-v] {discover,query,control,download} ...
 ## Troubleshooting
 * If devices are not being discovered, ensure your devices are on the same subnet as your computer.
 * If a cloud connection can not be made, try using a credentials from a different region with the `--region` argument or manually specifying a NetHome Plus account.
+
+## Ecosystem
+These projects are utilizing msmart-ng.
+* [mill1000/midea-ac-py](https://github.com/mill1000/midea-ac-py) - Home Assistant Integration
+* [sidey79/midea-mqtt](https://github.com/sidey79/midea-mqtt) - MQTT Bridge
 
 ## Gratitude
 This project is a fork of [mac-zhou/midea-msmart](https://github.com/mac-zhou/midea-msmart), and builds upon the work of
